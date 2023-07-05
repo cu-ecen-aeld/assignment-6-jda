@@ -13,6 +13,7 @@ SRCREV = "25f48ed118733c1806a97a91bb0571377405040a"
 # in your assignments repo
 S = "${WORKDIR}/git/server"
 
+RDEPENDS:${PN} += "libgcc"
 FILES:${PN} += "${bindir}/aesdsocket ${bindir}/aesdsocket-start-stop"
 TARGET_LDFLAGS += "-lrt"
 
