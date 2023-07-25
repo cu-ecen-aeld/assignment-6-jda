@@ -10,4 +10,6 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-7-jda;protocol=ssh;branc
 SRCREV = "1cbb746ecc9cf54aa148a3fa7754bf76c0cfa31e"
 S = "${WORKDIR}/git"
 
+EXTRA_OEMAKE:append_task-install = " -C ${STAGING_KERNEL_DIR} M=${S}/scull"
+
 RPROVIDES:${PN} += "kernel-module-scull"
