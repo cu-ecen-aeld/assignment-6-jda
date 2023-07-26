@@ -8,8 +8,8 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-7-jda;protocol=ssh;branc
 
 #PV = "1.0+git${SRCPV}"
 SRCREV = "1cbb746ecc9cf54aa148a3fa7754bf76c0cfa31e"
-S = "${WORKDIR}/git/scull"
+S = "${WORKDIR}/git/misc-modules"
 
 EXTRA_OEMAKE:append_task-install = " -C ${STAGING_KERNEL_DIR} M=${S}"
 
-RPROVIDES:${PN} += "kernel-module-scull"
+RPROVIDES:${PN} += "kernel-module-misc-modules"
