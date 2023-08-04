@@ -1,0 +1,11 @@
+diff --git a/scull/Makefile b/scull/Makefile
+index 3f6c8d0..2fc13cc 100644
+--- a/Makefile
++++ b/Makefile
+@@ -26 +26 @@ else
+-KERNELDIR ?= /lib/modules/$(shell uname -r)/build
++KERNELDIR ?= ${KERNEL_SRC}
+@@ -31,0 +32,3 @@ modules:
++modules_install:
++	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
++

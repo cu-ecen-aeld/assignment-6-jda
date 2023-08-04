@@ -1,7 +1,7 @@
-diff --git a/misc-modules/Makefile b/misc-modules/Makefile
+diff --git a/Makefile b/Makefile
 index 91be7cf..04ba6e1 100644
---- a/misc-modules/Makefile
-+++ b/misc-modules/Makefile
+--- a/Makefile
++++ b/Makefile
 @@ -12,7 +12,7 @@ ifeq ($(KERNELRELEASE),)
  
      # Assume the source tree is where the running kernel was built
