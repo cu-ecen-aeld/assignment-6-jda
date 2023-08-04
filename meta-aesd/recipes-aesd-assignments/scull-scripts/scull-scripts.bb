@@ -14,6 +14,6 @@ do_install() {
   install -m 0755 ${S}/scull_unload ${D}${sbindir}
 }
 FILES:${PN} += "${sbindir}/scull_load"
-#FILES:${PN} += "${sbindir}/scull_unload"
+FILES:${PN} += "${sbindir}/scull_unload"
 
 RDEPENDS:${PN} += "kernel-module-scull"

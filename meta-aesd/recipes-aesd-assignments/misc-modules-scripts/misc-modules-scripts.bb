@@ -8,5 +8,13 @@ SRC_URI = "git://git@github.com/cu-ecen-aeld/assignment-7-jda;protocol=ssh;branc
 SRCREV = "1cbb746ecc9cf54aa148a3fa7754bf76c0cfa31e"
 S = "${WORKDIR}/git/misc-modules"
 
+do_install() {
+  install -d ${D}${sbindir}
+  install -m 0755 ${S}/module_load ${D}${sbindir}/misc_module_load
+  install -m 0755 ${S}/module_unload ${D}${sbindir}/misc_module_unload
+}
+FILES:${PN} += "${sbindir}/misc_module_load"
+FILES:${PN} += "${sbindir}/misc_module_unload"
+
 RDEPENDS:${PN} += "kernel-module-misc-modules"
 
