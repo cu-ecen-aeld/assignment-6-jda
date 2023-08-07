@@ -9,6 +9,8 @@ SRC_URI += "file://scull-start-stop.sh"
 SRCREV = "1cbb746ecc9cf54aa148a3fa7754bf76c0cfa31e"
 S = "${WORKDIR}/git/scull"
 
+do_compile[noexec] = "1"
+
 do_install() {
   install -d ${D}${sbindir}
   install -m 0755 ${S}/scull_load ${D}${sbindir}

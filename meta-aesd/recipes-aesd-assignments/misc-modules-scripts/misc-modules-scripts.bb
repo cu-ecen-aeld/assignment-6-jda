@@ -9,6 +9,8 @@ SRC_URI += "file://misc-start-stop.sh"
 SRCREV = "1cbb746ecc9cf54aa148a3fa7754bf76c0cfa31e"
 S = "${WORKDIR}/git/misc-modules"
 
+do_compile[noexec] = "1"
+
 do_install() {
   install -d ${D}${sbindir}
   install -m 0755 ${S}/module_load ${D}${sbindir}/misc_module_load
